@@ -35,4 +35,4 @@ if(etaPasseggero < 18){
   message = 'il tuo biglietto ha un costo di: '
 }
 
-document.getElementById('output').innerHTML = message + prezzoTotale;
+document.getElementById('output').innerHTML = message + prezzoTotale.toFixed(2);
