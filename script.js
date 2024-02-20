@@ -19,19 +19,20 @@ console.log (etaPasseggero);
 
 const prezzoPerKm = 0.21
 
-const prezzoTotale = numKm * prezzoPerKm
+let prezzoTotale = numKm * prezzoPerKm
 console.log (prezzoTotale)
 
 // let message = '';
 
 
-if((etaPasseggero < 18) ||(prezzoTotale)){
-  
-  message = 'Utente minorenne ha sconto 20%'
+if(etaPasseggero < 18){
+  message = 'Sei un passeggero minorenne, hai diritto ad uno sconto del 20% e il tuo biglietto costa: '
+  prezzoTotale = prezzoTotale - (prezzoTotale * 0.2)
 }else if (etaPasseggero > 65){
-  message = 'Utente senior ha sconto 40%'
+  message = 'Sei un passeggero over 65, hai diritto ad uno sconto del 40% e il tuo biglietto costa: '
+  prezzoTotale = prezzoTotale - (prezzoTotale * 0.4)
 }else{
-  message = 'utente non ha sconto'
+  message = 'il tuo biglietto ha un costo di: '
 }
 
-document.getElementById('output').innerHTML = message;
+document.getElementById('output').innerHTML = message + prezzoTotale;
