@@ -4,15 +4,14 @@ console.log (numKm);
 const age =prompt ('Quanti anni hai? ');
 console.log (age);
 
-const ageUserMinorenne = 17
-
-const ageUserSenior = 65
+const prezzoPerKm = 0.21
+let prezzoTotale = distanza * prezzoPerKm
 
 let message = '';
 
-if(ageUserMinorenne < ageUserSenior){
+if(userAge < 18){
   message = 'Utente minorenne ha sconto 20%'
-}else if (ageUserSenior < 65){
+}else if (userAge > 65){
   message = 'Utente senior ha sconto 40%'
 }else{
   message = 'utente non ha sconto'
