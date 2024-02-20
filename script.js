@@ -25,7 +25,8 @@ console.log (prezzoTotale)
 // let message = '';
 
 
-if(etaPasseggero < 18){
+if((etaPasseggero < 18) ||(prezzoTotale)){
+  
   message = 'Utente minorenne ha sconto 20%'
 }else if (etaPasseggero > 65){
   message = 'Utente senior ha sconto 40%'
